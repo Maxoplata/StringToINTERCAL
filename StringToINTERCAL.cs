@@ -11,10 +11,10 @@
 using System;
 
 class StringToINTERCAL {
-  private int politeCount = 0;
+	private int politeCount = 0;
 
-  private string politeLine(string line) {
-    if (politeCount == 3) {
+	private string politeLine(string line) {
+		if (politeCount == 3) {
 			politeCount = 0;
 
 			return "PLEASE " + line + "\n";
@@ -23,9 +23,9 @@ class StringToINTERCAL {
 		politeCount++;
 
 		return "DO " + line + "\n";
-  }
+	}
 
-  private string leadingZeros(string dec) {
+	private string leadingZeros(string dec) {
 		int count = dec.Length;
 
 		if (count < 8) {
@@ -41,15 +41,15 @@ class StringToINTERCAL {
 		return dec;
 	}
 
-  private string reverseString(string myString) {
-    char[] charArray = myString.ToCharArray();
+	private string reverseString(string myString) {
+		char[] charArray = myString.ToCharArray();
 
-    Array.Reverse(charArray);
+		Array.Reverse(charArray);
 
-    return new string(charArray);
-  }
+		return new string(charArray);
+	}
 
-  public string convertToINTERCAL(string myString) {
+	public string convertToINTERCAL(string myString) {
 		// reset politeCount
 		politeCount = 0;
 
@@ -57,7 +57,7 @@ class StringToINTERCAL {
 
 		int lastCharLoc = 256;
 		for (int i = 0; i < myString.Length; i++) {
-      int charLoc = Convert.ToInt32(reverseString(leadingZeros(Convert.ToString((int) myString[i], 2))), 2);
+			int charLoc = Convert.ToInt32(reverseString(leadingZeros(Convert.ToString((int) myString[i], 2))), 2);
 
 			int movePosition = 0;
 
