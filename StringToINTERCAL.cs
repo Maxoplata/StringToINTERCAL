@@ -88,9 +88,9 @@ class App {
 		if (args.Length > 0) {
 			string inputString = String.Join(" ", args);
 
-      StringToINTERCAL myINTERCAL = new StringToINTERCAL();
+			StringToINTERCAL myINTERCAL = new StringToINTERCAL();
 
-      Console.WriteLine(myINTERCAL.convertToINTERCAL(inputString));
+			Console.WriteLine(myINTERCAL.convertToINTERCAL(inputString));
 		}
 	}
 }
