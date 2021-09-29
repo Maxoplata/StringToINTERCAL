@@ -33,13 +33,7 @@ class StringToINTERCAL {
 		const count = dec.length;
 
 		if (count < 8) {
-			let diff = 8 - count;
-
-			while (diff > 0) {
-				dec = `0${dec}`;
-
-				diff--;
-			}
+			dec = '0'.repeat(8 - count) + dec;
 		}
 
 		return dec;
