@@ -29,13 +29,7 @@ class StringToINTERCAL {
 		int count = dec.Length;
 
 		if (count < 8) {
-			int diff = 8 - count;
-
-			while (diff > 0) {
-				dec = "0" + dec;
-
-				diff--;
-			}
+			dec = new string('0', (8 - count)) + dec;
 		}
 
 		return dec;
