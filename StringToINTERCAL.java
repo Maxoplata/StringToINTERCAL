@@ -28,13 +28,7 @@ class StringToINTERCAL {
 		int count = dec.length();
 
 		if (count < 8) {
-			int diff = 8 - count;
-
-			while (diff > 0) {
-				dec = String.format("0%s", dec);
-
-				diff--;
-			}
+			dec = new String(new char[8 - count]).replace("\0", "0") + dec;
 		}
 
 		return dec;
