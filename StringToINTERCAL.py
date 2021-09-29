@@ -32,12 +32,7 @@ class StringToINTERCAL:
 		count = len(dec)
 
 		if count < 8:
-			diff = 8 - count
-
-			while diff > 0:
-				dec = '0{}'.format(dec)
-
-				diff -= 1
+			dec = ('0' * (8 - count)) + dec
 
 		return dec
 
