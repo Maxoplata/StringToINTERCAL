@@ -31,13 +31,7 @@ class StringToINTERCAL {
 		var retDec = dec
 
 		if count < 8 {
-			var diff = 8 - count
-
-			while diff > 0 {
-				retDec = "0\(retDec)"
-
-				diff -= 1
-			}
+			retDec = String(repeating: "0", count: (8 - count)) + retDec
 		}
 
 		return retDec
