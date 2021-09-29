@@ -38,13 +38,7 @@ func (self *StringToINTERCAL) leadingZeros(dec string) string {
 	count := len(dec)
 
 	if count < 8 {
-		diff := 8 - count
-
-		for diff > 0 {
-			dec = fmt.Sprintf("0%s", dec)
-
-			diff--
-		}
+		dec = strings.Repeat("0", (8 - count)) + dec
 	}
 
 	return dec
